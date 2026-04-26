@@ -1,23 +1,53 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ScamCheck</title>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Forum Base</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="app">
-    <h1>ScamCheck</h1>
 
-    <div class="search">
-      <input id="input" placeholder="@username или ID">
-      <button onclick="search()">Найти</button>
-    </div>
+<div class="bg"></div>
 
-    <div id="result"></div>
+<div class="app">
+
+  <header>
+    <h1>Forum Base</h1>
+    <p>Система проверки репутации</p>
+  </header>
+
+  <div class="search glass">
+    <input id="input" placeholder="Введите @user">
+    <button onclick="search()">🔍</button>
   </div>
 
-  <script src="app.js"></script>
+  <div class="grid">
+    <div class="box glass">ГЧ<br><b>42</b></div>
+    <div class="box glass">Замы<br><b>1</b></div>
+    <div class="box glass">Гаранты<br><b>20</b></div>
+    <div class="box glass">Проверенные<br><b>2</b></div>
+  </div>
+
+  <div class="circle">
+    <div class="inner">
+      <b>123</b>
+      <span>В базе</span>
+    </div>
+  </div>
+
+  <div class="tags">
+    <span class="bad">Мошенники: 496</span>
+    <span class="warn">Сомнительные: 15</span>
+    <span class="mail">Рассылка: 841</span>
+  </div>
+
+  <div id="result"></div>
+
+  <button class="report">Пожаловаться</button>
+
+</div>
+
+<script src="app.js"></script>
 </body>
 </html>

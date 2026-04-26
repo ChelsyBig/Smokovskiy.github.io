@@ -1,33 +1,33 @@
 const users = {
-  "@admin": {
-    id: "123456",
-    status: "Гарант",
-    reason: "Проверенный пользователь"
+  "@haflc": {
+    id: "64030689",
+    status: "Неизвестный",
+    reason: "Не найден в базе"
   },
-  "@scammer": {
+  "@scam": {
     id: "999999",
     status: "Скаммер",
-    reason: "Обман в сделках"
+    reason: "Мошенник"
   }
 };
 
 function search() {
-  const value = document.getElementById("input").value.trim().toLowerCase();
+  const value = document.getElementById("input").value.toLowerCase();
   const result = document.getElementById("result");
 
   if (users[value]) {
     const u = users[value];
     result.innerHTML = `
-      <div class="card">
+      <div class="profile glass">
         <h2>${value}</h2>
         <p>ID: ${u.id}</p>
-        <p class="${u.status === "Скаммер" ? "bad" : "good"}">${u.status}</p>
+        <p>${u.status}</p>
         <p>${u.reason}</p>
       </div>
     `;
   } else {
     result.innerHTML = `
-      <div class="card">
+      <div class="profile glass">
         <p>Пользователь неизвестный</p>
       </div>
     `;
